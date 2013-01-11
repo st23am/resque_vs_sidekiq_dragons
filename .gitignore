@@ -17,3 +17,6 @@
 /vendor/ruby/1.9.1/bin/
 /vendor/ruby/1.9.1/gems/
 /vendor/ruby/1.9.1/specifications/
+/vendor/jruby/1.9/bin/
+/vendor/jruby/1.9/gems/
+/vendor/jruby/1.9/specifications/
