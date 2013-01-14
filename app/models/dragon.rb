@@ -5,7 +5,7 @@ class Dragon
     @name = name
   end
 
-  def devour_the_villagers
+  def devour_the_villager
     count = Villager.living_villagers.count
     targeted_villager = rand(count)
     villager = Villager.find(targeted_villager)
