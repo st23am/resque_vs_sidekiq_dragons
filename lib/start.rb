@@ -1,5 +1,12 @@
+require 'app/models/villager'
+require 'app/workers/sidekiq_dragon'
+require 'app/jobs/resque_dragon'
 
-villager_count = Villager.liviing_villagers.count
+villager_count = Villager.living_villagers.count
+
+if Villager.devoured_villagers.any?
+  Villager.repopulate
+end
 
 vilager_count.times do
   Resque.enqueue(ResqueDragon)
