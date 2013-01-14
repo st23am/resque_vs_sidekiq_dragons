@@ -6,9 +6,11 @@ class Dragon
   end
 
   def devour_the_villagers
-    Villager.all.each do |villager|
-      villager.status = "#{villager.name} Devoured by #{name}"
-      villager.save!
-    end
+    count = Villager.living_villagers.count
+    targeted_villager = rand(count)
+    villager = Villager.find(targeted_villager)
+    villager.alive = false
+    villager.devoured_by = @name
+    villager.save!
   end
 end
