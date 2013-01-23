@@ -1,3 +1,0 @@
-class Hydra
-
-end
