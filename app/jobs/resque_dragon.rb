@@ -3,6 +3,6 @@ class ResqueDragon
 
   def self.perform
     dragon = Dragon.new("Resque")
-    dragon.devour_the_villager
+    dragon.devour_a_villager
   end
 end

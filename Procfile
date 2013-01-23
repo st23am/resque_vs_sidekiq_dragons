@@ -1,3 +1,4 @@
-releaseing_the_dragons: ruby lib/start.rb
-resque_worker: QUEUE=* rake resque:work
-sidekiq: bundle exec sidekiq
+redis: redis-server
+resque_worker: rake resque:work QUEUE=*
+sidekiq: sidekiq
+start: rake release_the_kraken
