@@ -5,6 +5,7 @@ class Villager < ActiveRecord::Base
     devoured_villagers.each do |villager|
       villager.update_attributes(alive: true, devoured_by: nil)
     end
+    puts "village populated"
   end
 
   def self.a_random_villager
