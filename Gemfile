@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
-ruby "1.9.3", :engine => "jruby", :engine_version => "1.7.2"
+ruby "1.9.3"
 gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'warbler' # crazy resque requires this for jRuby... !?!
 gem 'pry', :group => [:development, :test]
 gem 'foreman', :group => [:development, :test]
 gem 'slim'
