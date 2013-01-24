@@ -1,4 +1,6 @@
 HydrasVsEachOther::Application.routes.draw do
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

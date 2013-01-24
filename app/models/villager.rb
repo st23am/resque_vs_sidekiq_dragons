@@ -8,7 +8,7 @@ class Villager < ActiveRecord::Base
   end
 
   def self.a_random_villager
-    find rand(living_villagers.count).to_i
+    living_villagers.order('Random()').limit(1).first
   end
 
   def self.living_villagers

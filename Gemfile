@@ -9,6 +9,9 @@ gem 'pg'
 gem 'warbler' # crazy resque requires this for jRuby... !?!
 gem 'pry', :group => [:development, :test]
 gem 'foreman', :group => [:development, :test]
+gem 'slim'
+# if you require 'sinatra' you get the DSL extended to Object
+gem 'sinatra', :require => nil
 
 # Gems used only for assets and not required
 # in production environments by default.
