@@ -7,6 +7,10 @@ class Villager < ActiveRecord::Base
     end
   end
 
+  def self.a_random_villager
+    find rand(living_villagers.count).to_i
+  end
+
   def self.living_villagers
     where(alive: true)
   end

@@ -6,16 +6,19 @@ class Dragon
   end
 
   def devour_a_villager
-    count = Villager.living_villagers.count
-    if count > 0
-      targeted_villager = rand(count)
-      villager = Villager.find(targeted_villager)
-      if villager
-        villager.alive = false
-        villager.devoured_by = @name
-        villager.save!
-        puts "YUM YUM #{@name} ate #{villager.name}"
-      end
+    eat_them(Villager.a_random_villager)
+  end
+
+  private
+
+  def eat_them(villager)
+    if villager
+      villager.alive = false
+      villager.devoured_by = @name
+      villager.save!
+      puts "YUM YUM #{@name} ate #{villager.name}"
+    else
+      puts "#{@name} is sad cause there is no one to eat"
     end
   end
 end
